@@ -2,6 +2,7 @@
 ##################################################################################
 ################################################################################## Imports
 ##################################################################################
+import os
 os.system('pip install opencv-python-headless torch')
 os.system('pip install oci --upgrade')
 
@@ -9,7 +10,6 @@ from PIL import Image
 import torch
 import numpy as np
 import pandas as pd
-import os
 import io
 import shutil
 import sys
