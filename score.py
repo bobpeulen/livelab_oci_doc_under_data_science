@@ -26,7 +26,6 @@ import oci
 ##################################################################################
 
 config = oci.config.from_file("./config", 'DEFAULT') #in model deployment
-#config = oci.config.from_file("./model_artifacts/config", 'DEFAULT')  #in the notebook
 
 ##################################################################################
 ################################################################################## Load a Dummy model, used when storing and deploying the model
