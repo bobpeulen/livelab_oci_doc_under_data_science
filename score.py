@@ -42,12 +42,6 @@ import json
 import oci
 
 ##################################################################################
-################################################################################## Config file
-##################################################################################
-
-config = oci.config.from_file("./config", 'DEFAULT') #in model deployment
-
-##################################################################################
 ################################################################################## Load a Dummy model, used when storing and deploying the model
 ##################################################################################
 
@@ -169,7 +163,10 @@ def retrieve_results(config, processor_response, output_location):
 def predict(data, model=load_model()):
     
     #Get the Base64 pdf file
-    document_encoded = data['data']
+    receipt_encoded = data['data']
+    
+    #define config
+    config = oci.config.from_file("./config", 'DEFAULT') #in model deployment
     
     
     ###################################################################################################################
