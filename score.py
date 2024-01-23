@@ -27,7 +27,6 @@ output_name_prefix = "Receipts_output"
 ################################################################################## Imports
 ##################################################################################
 import os
-from PIL import Image
 import numpy as np
 import pandas as pd
 import io
