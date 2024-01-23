@@ -1,13 +1,33 @@
+##################################################################################
+################################################################################## Set your specific variables below.
+##################################################################################
+
+## Add the Model OCID of your custom Receipt classification model
+model_1_classification = "ocid1.aidocumentmodel.oc1.eu-frankfurt-1.amaaaaaangencdyaoawxvuk7cubv5nf7shwgwqp3qbvggxiob7ljpxrci22a"
+
+## Add the Model OCID of your custom key value extractions for Wholefoods
+model_2_wholefoods_kv = "ocid1.aidocumentmodel.oc1.eu-frankfurt-1.amaaaaaangencdyaryeppopftukryka7bym4uviyynfzbpc6dfszyrpch56a"
+
+## Add the Model OCID of your custom key value extractions for Walgreens
+model_3_walgreens_kv = "ocid1.aidocumentmodel.oc1.eu-frankfurt-1.amaaaaaangencdyajn367pu5cqpf64g3uunvqw7eewtb67esmacsgbz7jfqa"
+
+## Add here you Bucket Name
+bucket_name = "West_BP"
+
+## Add here you Namespace
+namespace = "frqap2zhtzbe"
+
+## Add here you Compartment OCID
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaae3n6r6hrjipbap2hojicrsvkzatrtlwvsyrpyjd7wjnw4za3m75q"
+
+## Add here or leave as is the prefix for all OCI Document Understanding output files
+output_name_prefix = "Receipts_output"
 
 ##################################################################################
 ################################################################################## Imports
 ##################################################################################
 import os
-os.system('pip install opencv-python-headless torch')
-os.system('pip install oci --upgrade')
-
 from PIL import Image
-import torch
 import numpy as np
 import pandas as pd
 import io
